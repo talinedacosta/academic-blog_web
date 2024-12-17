@@ -71,6 +71,9 @@ const EditPost = () => {
         <Button variant="contained" color="primary" type="submit" disabled={loading}>
           {loading ? "Carregando..." : "Atualizar"}
         </Button>
+        <Button variant="outlined" color="secondary" onClick={() => navigate("/admin")}>
+          Cancelar
+        </Button>
       </Stack>
     </Stack>
   );

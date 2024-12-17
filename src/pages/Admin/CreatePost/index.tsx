@@ -1,8 +1,10 @@
 import { Alert, Button, Stack, TextField, Typography } from "@mui/material";
 import React from "react";
 import api from "../../../services/api";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
+  const navigate = useNavigate();
   const [title, setTitle] = React.useState("");
   const [content, setContent] = React.useState("");
   const [loading, setLoading] = React.useState(false);
@@ -30,7 +32,7 @@ const CreatePost = () => {
   };
 
   return (
-    <Stack spacing={2} >
+    <Stack spacing={2}>
       <Typography variant="h4">Criar postagem</Typography>
       {error && <Alert severity="error">Erro ao criar postagem</Alert>}
       {created && <Alert severity="success">Postagem criada com sucesso</Alert>}
@@ -42,6 +44,9 @@ const CreatePost = () => {
 
         <Button variant="contained" color="primary" type="submit" disabled={loading}>
           {loading ? "Carregando..." : "Criar"}
+        </Button>
+        <Button variant="outlined" color="secondary" onClick={() => navigate("/admin")}>
+          Cancelar
         </Button>
       </Stack>
     </Stack>
