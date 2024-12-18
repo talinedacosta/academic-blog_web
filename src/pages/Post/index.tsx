@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Post as PostType } from "../Posts";
 import api from "../../services/api";
 import { Divider, Stack, Typography } from "@mui/material";
+import { Post as PostType} from "../../interfaces/Post";
 
 const Post = () => {
   const { id } = useParams();

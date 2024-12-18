@@ -3,18 +3,7 @@ import api from "../../services/api";
 import { Card, CardContent, Stack, TextField, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDebounce } from "use-debounce";
-
-export interface Post {
-  id: number;
-  title: string;
-  content: string;
-  created_at?: Date;
-  updated_at?: Date;
-  created_by?: number;
-  updated_by?: number;
-  created_by_name?: string;
-  updated_by_name?: string;
-}
+import { Post } from "../../interfaces/Post";
 
 const Posts = () => {
   const navigate = useNavigate();

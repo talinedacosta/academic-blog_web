@@ -6,7 +6,4 @@ services:
     container_name: academic_blog_web
     ports:
       - "9100:80"
-    environment:
-      - NODE_ENV=production
-      - VITE_API_URL=http://0.0.0.0:5432
     restart: always
